@@ -1,13 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Container } from "@material-ui/core";
+import { AppBar, Toolbar } from "@material-ui/core";
 import TopLeft from "./top-left";
+import TopCenter from "./top-center";
+import TopRight from "./top-right";
 
 const Header = () => {
   return (
-    <Container fixed>
-      <TopLeft />
-    </Container>
+    <AppBar color="#fff" position="relative">
+      <Toolbar>
+        <TopLeft />
+        <TopCenter />
+        <TopRight />
+      </Toolbar>
+    </AppBar>
   );
 };
 export default Header;
