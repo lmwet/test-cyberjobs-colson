@@ -7,8 +7,12 @@ import {
   Typography,
   Card,
   CardMedia,
+  CardContent,
+  CardActions,
+  Button,
 } from "@material-ui/core";
 import Otherjobs from "./other-jobs";
+import Sider from "./sider";
 
 const useStyles = makeStyles((theme) => ({
   spacing: 8,
@@ -34,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
   text: {
     color: theme.palette.text.secondary,
   },
+  cardMedia: {
+    height: "20rem",
+  },
 }));
 
 const MainGrid = () => {
@@ -41,14 +48,10 @@ const MainGrid = () => {
 
   return (
     <Container maxWidth="lg" className={classes.row}>
+      {/* Left Side column */}
       <Grid container spacing={3} className={classes.root}>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.blue}>
-            La Marine nationale est une des composantes des forces armées et
-            dépend du ministère des armées. Elle est engagée en permanence sur
-            toutes les mers du monde.
-          </Paper>
-        </Grid>
+        <Sider />
+
         <Grid item xs={12} sm={9}>
           <Paper className={classes.paper}>
             <Typography
@@ -59,6 +62,7 @@ const MainGrid = () => {
             >
               Descriptif de l'offre
             </Typography>
+
             <Typography className={classes.text} variant="caption">
               La Direction Interarmées des Réseaux d’Infrastructure et des
               Systèmes d’Information (DIRISI) est l’opérateur des systèmes
@@ -89,6 +93,7 @@ const MainGrid = () => {
               indicateurs locaux avec le back office, il veille au contrôle
               qualité des procédures.
             </Typography>
+
             <Typography
               className={classes.text}
               gutterBottom
@@ -97,6 +102,7 @@ const MainGrid = () => {
             >
               Profil recherché
             </Typography>
+
             <Typography className={classes.text} variant="caption">
               Profil recherché - Master 1 ou 2 dans l’informatique générale ; -
               Maitrise d’outils bureautiques sous WINDOWS avec utilisation des
@@ -106,17 +112,20 @@ const MainGrid = () => {
           </Paper>
         </Grid>
       </Grid>
-      <Grid item xs={15} sm={9}>
-        <Card className={classes.card}>
-          <CardMedia
-            className={classes.cardMedia}
-            component="img"
-            alt="grid-images"
-            height="175"
-            image="/images/imagesGrid.png"
-            title="Grid"
-          />
-        </Card>
+      <Grid container spacing={3} className={classes.root}>
+        <Grid item xs={6} sm={3}></Grid>
+        <Grid item xs={15} sm={9}>
+          <Card className={classes.card}>
+            <CardMedia
+              className={classes.cardMedia}
+              component="img"
+              alt="grid-images"
+              height="175"
+              image="/images/imagesGrid.png"
+              title="Grid"
+            />
+          </Card>
+        </Grid>
       </Grid>
       <Otherjobs />
     </Container>
