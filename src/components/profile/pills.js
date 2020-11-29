@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
-import { Typography } from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
 import {
   Card,
   CardContent,
@@ -9,8 +9,6 @@ import {
   Button,
   Container,
 } from "@material-ui/core";
-import Topprofile from "./top-profile";
-import Pills from "./pills";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -18,17 +16,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Company = () => {
+const Pills = () => {
   const classes = useStyles();
 
-  return (
-    <Container>
-      <Card className={classes.card}>
-        <Topprofile />
-        <Pills />
-      </Card>
-    </Container>
-  );
+  return <Container></Container>;
 };
 
-export default Company;
+export default Pills;

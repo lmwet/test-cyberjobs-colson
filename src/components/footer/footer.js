@@ -10,25 +10,21 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#3b3e47",
     fontSize: "0.8rem",
     color: "white",
-    height: 300,
+    height: 500,
     width: "100%",
   },
 }));
 
-const rows: RowsProp = [
-  { id: 1, col1: "Hello", col2: "World" },
-  { id: 2, col1: "XGrid", col2: "is Awesome" },
-  {
-    id: 3,
-    col1: "  © Copyright 2020 - Tous droits réservés Cyberjobs.fr",
-    col2: "is Amazing",
-  },
-];
-
 const columns: ColDef[] = [
   { field: "id", hide: true },
-  { field: "col1", headerName: "Column 1", width: 150 },
-  { field: "col2", headerName: "Column 2", width: 150 },
+  { field: "col1", headerName: "LIENS UTILS", width: 150 },
+  { field: "col2", headerName: "A PROPOS", width: 150 },
+];
+
+const rows: RowsProp = [
+  { id: 1, col1: "Recruteurs", col2: "Mentions Legales" },
+  { id: 2, col1: "Contact", col2: "CGU" },
+  { id: 3, col1: "  ", col2: "Confidentialite" },
 ];
 
 const Footer = () => {
