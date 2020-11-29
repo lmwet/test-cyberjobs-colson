@@ -18,7 +18,7 @@ export const theme = createMuiTheme({
   shape: {
     borderRadius: "1em",
   },
-  spacing: 10,
+  spacing: 8,
   overrides: {
     MuiButton: {
       root: {

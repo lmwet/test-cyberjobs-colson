@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
   root: {
     flexGrow: 1,
+    // shadows: theme.shadows[24],
   },
   paper: {
     padding: theme.spacing(2),
@@ -41,6 +42,9 @@ const useStyles = makeStyles((theme) => ({
   cardMedia: {
     height: "20rem",
   },
+  h5: {
+    color: theme.palette.text.primary,
+  },
 }));
 
 const MainGrid = () => {
@@ -55,7 +59,7 @@ const MainGrid = () => {
         <Grid item xs={12} sm={9}>
           <Paper className={classes.paper}>
             <Typography
-              className={classes.text}
+              className={classes.h5}
               gutterBottom
               variant="h5"
               component="h2"
@@ -95,7 +99,7 @@ const MainGrid = () => {
             </Typography>
 
             <Typography
-              className={classes.text}
+              className={classes.h5}
               gutterBottom
               variant="h5"
               component="h2"
