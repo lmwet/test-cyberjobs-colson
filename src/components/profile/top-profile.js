@@ -8,7 +8,7 @@ import {
   Button,
   Container,
 } from "@material-ui/core";
-import Link from "@material-ui/core/Link";
+import Titleframe from "./title-frame";
 
 const useStyles = makeStyles((theme) => ({
   cardMedia: {
@@ -24,6 +24,7 @@ const Topprofile = () => {
 
   return (
     <React.Fragment>
+      {/* banner image */}
       <CardMedia
         className={classes.cardMedia}
         component="img"
@@ -32,20 +33,18 @@ const Topprofile = () => {
         image="/images/marine.png"
         title="Company Image"
       />
-      <Container id="title-frame" className={classes.titleFrame}>
-        <Typography gutterBottom variant="h5" component="h2">
-          Coordinateur service informatique
-        </Typography>
-        <Typography>à Marine Nationale</Typography>
-      </Container>
+      <Titleframe />
 
-      {/* <CardContent className={classes.cardContent}></CardContent> */}
+      {/* Menu company */}
       <CardActions>
         <Button size="small" color="primary">
-          View
+          PRESENTATION
         </Button>
         <Button size="small" color="primary">
-          Edit
+          AUTRE JOBS
+        </Button>
+        <Button size="small" color="primary">
+          ENTREPRISES
         </Button>
       </CardActions>
     </React.Fragment>
