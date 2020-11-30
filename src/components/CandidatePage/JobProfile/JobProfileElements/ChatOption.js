@@ -1,25 +1,25 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import { Box, Button, Container, Fab } from "@material-ui/core";
-import DescriptionOutlinedIcon from "@material-ui/icons/DescriptionOutlined";
+import ChatOutlinedIcon from "@material-ui/icons/ChatOutlined";
 
 const useStyles = makeStyles((theme) => ({
   candidater: {
-    backgroundColor: "#f4d47d",
+    backgroundColor: "#f4e47d",
     color: theme.palette.text.primary,
   },
 }));
 
-const ApplyButton = () => {
+const ChatOption = () => {
   const classes = useStyles();
 
   return (
     <Box>
       <Fab variant="extended" className={classes.candidater}>
-        envoyer ma candidature <DescriptionOutlinedIcon />
+        Chat entreprise <ChatOutlinedIcon />
       </Fab>
     </Box>
   );
 };
 
-export default ApplyButton;
+export default ChatOption;

@@ -5,11 +5,18 @@ import Titles from "./JobProfileElements/Titles";
 import Pills from "./JobProfileElements/Pills";
 import JobLinks from "./JobProfileElements/JobLinks";
 import CompanyBanner from "./JobProfileElements/CompanyBanner";
+import ChatOption from "./JobProfileElements/ChatOption";
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles((theme) => ({
   card: {
     padding: 16,
+  },
+  buttonsContainer: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "no-wrap",
+    justifyContent: "space-between",
   },
 }));
 
@@ -20,8 +27,12 @@ const JobProfile = ({ jobProfile }) => {
       <Card className={classes.card}>
         <CompanyBanner />
         <Titles titles={jobProfile.titles} />
+        <Container maxWidth="md" className={classes.buttonsContainer}>
+          <ApplyButton />
+          <ChatOption />
+          <ApplyButton />
+        </Container>
         <JobLinks />
-        <ApplyButton />
         <Pills pills={jobProfile.pills} />
       </Card>
     </Container>
