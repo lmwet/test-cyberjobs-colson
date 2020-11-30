@@ -5,7 +5,6 @@ import { Icon } from "@material-ui/core";
 import {
   Paper,
   Grid,
-  Container,
   Typography,
   Card,
   CardMedia,
@@ -16,20 +15,21 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   spacing: 8,
-
   root: {
     flexGrow: 1,
   },
   cardGrid: {
-    padding: theme.spacing(3),
+    padding: theme.spacing(2),
   },
   card: {
     height: "100%",
     display: "flex",
     flexDirection: "column",
+    padding: theme.spacing(2),
   },
   cardMedia: {
     paddingTop: "56.25%",
+    padding: theme.spacing(2),
   },
   cardContent: {
     flexGrow: 1,
@@ -39,9 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6];
-
-const OtherJobs = () => {
+const OtherJobs = ({ otherJobs }) => {
   const classes = useStyles();
 
   return (
@@ -53,22 +51,22 @@ const OtherJobs = () => {
             Autres Jobs
           </Typography>
           <Grid container spacing={6}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={15} sm={9} md={6}>
+            {otherJobs.map((job) => (
+              <Grid item key={job} xs={15} sm={9} md={6}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://www.cyberjobs.fr/api/Misc/Image/0/CJ-5b9baa0d7631920588e3318b_image?ca&size=800"
-                    title="job image"
+                    image={job.imgUrl}
+                    title={job.title}
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Bourse Cyber
+                      {job.title}
                     </Typography>
                   </CardContent>
                   <CardActions>
                     <Button size="small" color="secondary" disabled>
-                      <Icon>bookmark</Icon> CDD - Disponible dans 1 à 3 mois
+                      <Icon>{job.icon}</Icon> {job.caption}
                     </Button>
                   </CardActions>
                 </Card>

@@ -1,7 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { Container, Button, Typography } from "@material-ui/core";
-import { spacing } from "@material-ui/system";
+import { Container, Button } from "@material-ui/core";
 
 const TopCenter = () => {
   return (

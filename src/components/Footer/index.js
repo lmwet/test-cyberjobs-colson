@@ -1,11 +1,12 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
-import { Typography, Box } from "@material-ui/core";
-import Link from "@material-ui/core/Link";
+import { Box } from "@material-ui/core";
+
 import { DataGrid, RowsProp, ColDef } from "@material-ui/data-grid";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
+    marginTop: theme.spacing(2),
     padding: theme.spacing(4),
     backgroundColor: "#3b3e47",
     fontSize: "0.8rem",

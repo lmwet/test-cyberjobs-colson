@@ -1,14 +1,13 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import Typography from "@material-ui/core/Typography";
-import { CardContent, Container, Card } from "@material-ui/core";
+import { Container, Card } from "@material-ui/core";
 import CompanyLogo from "./CompanyLogo";
 
 const useStyles = makeStyles((theme) => ({
   cardMedia: {
     padding: -2,
   },
-
   card: {
     width: "5rem",
   },
@@ -22,13 +21,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Titles = () => {
+const Titles = ({ titles }) => {
   const classes = useStyles();
 
   return (
     <Container id="title-frame">
       <Card className={classes.card}>
-        <CompanyLogo />
+        <CompanyLogo logo={titles.imgUrl} />
       </Card>
       <Typography
         className={classes.titleFrame}
@@ -36,9 +35,11 @@ const Titles = () => {
         variant="h3"
         component="h2"
       >
-        Coordinateur service informatique
+        {titles.jobTitle}
       </Typography>
-      <Typography className={classes.titleFrame}>à Marine Nationale</Typography>
+      <Typography className={classes.titleFrame}>
+        {titles.companyTitle}
+      </Typography>
     </Container>
   );
 };

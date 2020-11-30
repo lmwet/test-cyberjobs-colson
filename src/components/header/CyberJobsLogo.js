@@ -1,17 +1,17 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { Box } from "@material-ui/core";
 
-const TopLeft = () => {
+const CyberJobsLogo = () => {
   return (
     <Box>
       <img
         className="logo-cyberjobs"
         height="100px"
         src="/images/logo-cyberjobs.png"
+        alt="logo-cyberJobs"
       />
     </Box>
   );
 };
 
-export default TopLeft;
+export default CyberJobsLogo;

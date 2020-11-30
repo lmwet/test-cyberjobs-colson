@@ -4,32 +4,36 @@ import { Card, CardMedia, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   cardMedia: {
-    margin: "-3%",
-    width: "105%",
     height: "20rem",
-    objectPosition: "100% 20%",
-    objectFit: "cover",
+  },
+  spacing: 8,
+
+  root: {
+    flexGrow: 1,
   },
 }));
 
-const JobImages = () => {
+const JobImages = ({ jobImages }) => {
   const classes = useStyles();
 
   return (
     <Grid container spacing={3} className={classes.root}>
       <Grid item xs={6} sm={3}></Grid>
-      <Grid item xs={15} sm={9}>
-        <Card className={classes.card}>
-          <CardMedia
-            className={classes.cardMedia}
-            component="img"
-            alt="grid-images"
-            height="175"
-            image="/images/imagesGrid.png"
-            title="Grid"
-          />
-        </Card>
-      </Grid>
+      {jobImages &&
+        jobImages.map((image) => (
+          <Grid item xs={15} sm={9}>
+            <Card>
+              <CardMedia
+                className={classes.cardMedia}
+                component="img"
+                alt={image.alt}
+                height="175"
+                image={image.imgUrl}
+                title={image.imgTitle}
+              />
+            </Card>
+          </Grid>
+        ))}
     </Grid>
   );
 };

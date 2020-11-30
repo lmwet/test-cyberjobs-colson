@@ -1,17 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { AppBar, Toolbar } from "@material-ui/core";
-import TopLeft from "./top-left";
-import TopCenter from "./top-center";
-import TopRight from "./top-right";
+import HeaderLinks from "./HeaderLinks";
+import LoginButtons from "./LoginButtons";
+import CyberJobsLogo from "./CyberJobsLogo";
 
 const Header = () => {
   return (
     <AppBar color="#fff" position="relative">
       <Toolbar>
-        <TopLeft />
-        <TopCenter />
-        <TopRight />
+        <CyberJobsLogo />
+        <HeaderLinks />
+        <LoginButtons />
       </Toolbar>
     </AppBar>
   );

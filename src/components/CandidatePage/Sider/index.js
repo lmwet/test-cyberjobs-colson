@@ -14,22 +14,18 @@ import {
 const useStyles = makeStyles((theme) => ({
   spacing: 8,
 
-  root: {
-    flexGrow: 1,
-  },
   paper: {
     padding: theme.spacing(2),
     textAlign: "justify",
     color: theme.palette.text.primary,
     marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
+    // marginBottom: theme.spacing(2),
   },
   blue: {
     padding: theme.spacing(2),
     textAlign: "justify",
     backgroundColor: "#3eb8fd",
     color: "white",
-    marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
   },
   text: {
@@ -41,16 +37,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Sider = () => {
+const Sider = ({ info }) => {
   const classes = useStyles();
 
   return (
     <Grid item xs={6} sm={3}>
-      <Paper className={classes.blue}>
-        La Marine nationale est une des composantes des forces armées et dépend
-        du ministère des armées. Elle est engagée en permanence sur toutes les
-        mers du monde.
-      </Paper>
+      <Paper className={classes.blue}>{info}</Paper>
       <Card className={classes.card}>
         <CardMedia
           className={classes.cardMedia}

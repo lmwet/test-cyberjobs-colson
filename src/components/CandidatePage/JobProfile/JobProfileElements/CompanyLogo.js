@@ -2,15 +2,9 @@ import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import { CardMedia } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
-  cardMedia: {
-    padding: -2,
-  },
-}));
+// This component lives in the "Titles" file.
 
-const CompanyLogo = () => {
-  const classes = useStyles();
-
+const CompanyLogo = ({ logo }) => {
   return (
     <CardMedia
       id="company-avatar"
@@ -18,7 +12,7 @@ const CompanyLogo = () => {
       alt="company-image"
       max-height="45"
       max-width="30"
-      image="/images/logo-marine.png"
+      image={logo}
       title="Marine Logo"
     />
   );

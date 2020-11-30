@@ -1,8 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { Box, Button, Typography } from "@material-ui/core";
 
-const TopRight = () => {
+const LoginButtons = () => {
   return (
     <Box>
       <Typography variant="h6">
@@ -22,4 +21,4 @@ const TopRight = () => {
   );
 };
 
-export default TopRight;
+export default LoginButtons;

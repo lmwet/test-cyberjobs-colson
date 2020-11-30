@@ -8,27 +8,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Pills = () => {
+const Pills = ({ pills }) => {
   const classes = useStyles();
 
   return (
     <Container size="lg">
-      <Button className={classes.pills} variant="outlined" disabled>
-        <Icon>bookmark</Icon>
-        Non renseigné
-      </Button>
-      <Button className={classes.pills} variant="outlined" disabled>
-        <Icon>map_marker</Icon> CDD - Disponible dans 1 à 3 mois
-      </Button>
-      <Button className={classes.pills} variant="outlined" disabled>
-        <Icon>house</Icon> Maisons Lafitte (78)
-      </Button>
-      <Button className={classes.pills} variant="outlined" disabled>
-        <Icon>money</Icon> 1500 à 3000€/Prime
-      </Button>
-      <Button className={classes.pills} variant="outlined" disabled>
-        <Icon>alarm</Icon> Aucune
-      </Button>
+      {pills &&
+        pills.map((pill, pillIndex) => (
+          <Button
+            key={pillIndex}
+            className={classes.pills}
+            variant="outlined"
+            disabled
+          >
+            <Icon key={pillIndex}>{pill.icon}</Icon>
+            {pill.info}
+          </Button>
+        ))}
     </Container>
   );
 };
