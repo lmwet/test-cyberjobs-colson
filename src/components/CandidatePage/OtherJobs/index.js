@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { Icon } from "@material-ui/core";
 
 import {
   Paper,
@@ -40,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
 
 const cards = [1, 2, 3, 4, 5, 6];
 
-const Otherjobs = () => {
+const OtherJobs = () => {
   const classes = useStyles();
 
   return (
@@ -58,20 +59,16 @@ const Otherjobs = () => {
                   <CardMedia
                     className={classes.cardMedia}
                     image="https://www.cyberjobs.fr/api/Misc/Image/0/CJ-5b9baa0d7631920588e3318b_image?ca&size=800"
-                    title="Image title"
+                    title="job image"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
                       Bourse Cyber
                     </Typography>
-                    <Typography variant="caption">Blabla</Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
+                    <Button size="small" color="secondary" disabled>
+                      <Icon>bookmark</Icon> CDD - Disponible dans 1 à 3 mois
                     </Button>
                   </CardActions>
                 </Card>
@@ -84,4 +81,4 @@ const Otherjobs = () => {
   );
 };
 
-export default Otherjobs;
+export default OtherJobs;

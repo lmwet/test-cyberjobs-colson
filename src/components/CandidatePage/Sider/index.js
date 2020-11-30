@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import {
   Paper,
   Grid,
-  Container,
   Typography,
   Card,
   CardMedia,
@@ -11,7 +10,6 @@ import {
   CardActions,
   Button,
 } from "@material-ui/core";
-import Otherjobs from "./other-jobs";
 
 const useStyles = makeStyles((theme) => ({
   spacing: 8,

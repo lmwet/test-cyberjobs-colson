@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BreadcrumbsNav = () => {
+const BreadCrumbs = () => {
   const classes = useStyles();
 
   return (
@@ -36,4 +36,4 @@ const BreadcrumbsNav = () => {
   );
 };
 
-export default BreadcrumbsNav;
+export default BreadCrumbs;

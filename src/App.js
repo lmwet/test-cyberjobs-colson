@@ -1,19 +1,14 @@
 import "./App.css";
 import React from "react";
-import { theme } from "./theme";
-import Header from "./components/header/header";
-import MainGrid from "./components/mozaik/main-grid";
-import BreadcrumbsNav from "./components/breadcrumbs/breadcrumbs";
-import Company from "./components/profile/company";
-import Footer from "./components/footer/footer";
+import Header from "./components/Header";
+import CandidatePage from "./components/CandidatePage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <React.Fragment>
       <Header />
-      <BreadcrumbsNav />
-      <Company />
-      <MainGrid />
+      <CandidatePage />
       <Footer />
     </React.Fragment>
   );

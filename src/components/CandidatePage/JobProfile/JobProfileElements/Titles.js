@@ -1,13 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import Typography from "@material-ui/core/Typography";
-import {
-  CardContent,
-  CardMedia,
-  Button,
-  Container,
-  Card,
-} from "@material-ui/core";
+import { CardContent, Container, Card } from "@material-ui/core";
+import CompanyLogo from "./CompanyLogo";
 
 const useStyles = makeStyles((theme) => ({
   cardMedia: {
@@ -22,30 +17,23 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     position: "relative",
     zIndex: 100000000,
-    left: -10,
+    left: 100,
     top: -180,
   },
 }));
 
-const Titleframe = () => {
+const Titles = () => {
   const classes = useStyles();
 
   return (
     <Container id="title-frame">
       <Card className={classes.card}>
-        <CardMedia
-          component="img"
-          alt="company-image"
-          max-height="45"
-          max-width="30"
-          image="/images/logo-marine.png"
-          title="Company Image"
-        />
+        <CompanyLogo />
       </Card>
       <Typography
         className={classes.titleFrame}
         gutterBottom
-        variant="h4"
+        variant="h3"
         component="h2"
       >
         Coordinateur service informatique
@@ -55,4 +43,4 @@ const Titleframe = () => {
   );
 };
 
-export default Titleframe;
+export default Titles;

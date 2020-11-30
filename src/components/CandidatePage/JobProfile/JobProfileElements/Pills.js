@@ -1,13 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
-import Typography from "@material-ui/core/Typography";
-import { Button, Container } from "@material-ui/core";
-import { Icon } from "@material-ui/core";
+import { Button, Container, Icon } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  card: {
-    padding: theme.spacing(2),
-  },
   pills: {
     borderRadius: 2,
   },
