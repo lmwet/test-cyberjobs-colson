@@ -1,6 +1,6 @@
 # Test Front-end Lea Colson for Cyberjobs
 
-In the project directory, you can run:
+A front-end technical test propposing a UI including new features. To start the project, please run:
 
 ### `yarn start`
 
