@@ -1,5 +1,4 @@
 import React from "react";
-import { makeStyles } from "@material-ui/styles";
 import { CardMedia } from "@material-ui/core";
 
 // This component lives in the "Titles" file.

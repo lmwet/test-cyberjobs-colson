@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/styles";
 import { Box, Fab, Typography, Card, CardContent } from "@material-ui/core";
-import ChatOutlinedIcon from "@material-ui/icons/ChatOutlined";
+import EventOutlinedIcon from "@material-ui/icons/EventOutlined";
 
 const useStyles = makeStyles((theme) => ({
   candidater: {
-    backgroundColor: "#f4e47d",
+    backgroundColor: "#f4c47d",
     color: theme.palette.text.secondary,
     textTransform: "none",
-    pointerEvents: "auto",
-    cursor: "pointer",
+    pointerEvents: "pointer",
   },
   infobox: {
     position: "absolute",
+    right: "26vw",
     marginTop: "60px",
     zIndex: 1000000000000000,
     flexDirection: "column",
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ChatOption = () => {
+const Booking = () => {
   const [isShown, setIsShown] = useState(false);
   const classes = useStyles();
 
@@ -38,12 +38,12 @@ const ChatOption = () => {
     <React.Fragment>
       <Box>
         <Fab
-          variant="extended"
           className={classes.candidater}
+          variant="extended"
           onMouseEnter={() => setIsShown(true)}
           onMouseLeave={() => setIsShown(false)}
         >
-          Chat entreprise <ChatOutlinedIcon />
+          Réserver une interview <EventOutlinedIcon color="action" />
         </Fab>
       </Box>
       {isShown && (
@@ -51,9 +51,9 @@ const ChatOption = () => {
           <CardContent>
             <Typography variant="subtitle2" color="primary">
               <Box className={classes.icon}>
-                <ChatOutlinedIcon color="action" fontSize="large" />
+                <EventOutlinedIcon color="action" fontSize="large" />
               </Box>
-              Prêts pour un "buisness chat"? Posez vos questions à l'entreprise
+              Réserver une date d'interview
             </Typography>
           </CardContent>
         </Card>
@@ -62,4 +62,4 @@ const ChatOption = () => {
   );
 };
 
-export default ChatOption;
+export default Booking;

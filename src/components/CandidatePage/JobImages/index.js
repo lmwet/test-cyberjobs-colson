@@ -21,7 +21,7 @@ const JobImages = ({ jobImages }) => {
       <Grid item xs={6} sm={3}></Grid>
       {jobImages &&
         jobImages.map((image) => (
-          <Grid item xs={15} sm={9}>
+          <Grid key={image.imgUrl} item xs={15} sm={9}>
             <Card>
               <CardMedia
                 className={classes.cardMedia}

@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Icon } from "@material-ui/core";
-
 import {
   Paper,
   Grid,
@@ -28,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   cardMedia: {
-    paddingTop: "56.25%",
+    paddingTop: "55%",
     padding: theme.spacing(2),
   },
   cardContent: {
@@ -52,7 +51,7 @@ const OtherJobs = ({ otherJobs }) => {
           </Typography>
           <Grid container spacing={6}>
             {otherJobs.map((job) => (
-              <Grid item key={job} xs={15} sm={9} md={6}>
+              <Grid item key={job.title} xs={15} sm={9} md={6}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}

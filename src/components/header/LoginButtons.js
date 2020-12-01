@@ -5,12 +5,7 @@ const LoginButtons = () => {
   return (
     <Box>
       <Typography variant="h6">
-        <Button
-          variant="contained"
-          color="primary"
-          disableElevation
-          focusVisible={false}
-        >
+        <Button variant="contained" color="primary" disableElevation>
           Connexion
         </Button>
         <Button variant="outlined" color="primary">

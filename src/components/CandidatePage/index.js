@@ -45,7 +45,7 @@ const CandidatePage = () => {
 
     otherJobs: [
       {
-        title: "bourse Cyber",
+        title: "Bourse Cyber",
         icon: "bookmark",
         caption: "CDD - Disponible dans 1 à 3 mois",
         imgUrl: "/images/marine.png",
@@ -63,7 +63,7 @@ const CandidatePage = () => {
         imgUrl: "/images/imagesGrid.png",
       },
       {
-        title: "Cyber Job",
+        title: "Cyber Security Job",
         icon: "alarm",
         caption: "CDD - Disponible dans 1 à 3 mois",
         imgUrl: "/images/imagesGrid.png",
@@ -75,7 +75,7 @@ const CandidatePage = () => {
         imgUrl: "/images/imagesGrid.png",
       },
       {
-        title: "Bla Job",
+        title: "Navy Job",
         icon: "house",
         caption: "CDD - Disponible dans 1 à 3 mois",
         imgUrl: "/images/imagesGrid.png",

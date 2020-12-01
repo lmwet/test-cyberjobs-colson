@@ -14,6 +14,10 @@ export const theme = createMuiTheme({
       fontFamily: "Poppins",
       fontSize: "1.1rem",
     },
+    body1: {
+      fontFamily: "Nunito",
+      fontWeight: 500,
+    },
   },
   shape: {
     borderRadius: "1em",

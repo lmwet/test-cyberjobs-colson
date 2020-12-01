@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Button } from "@material-ui/core";
 
-const TopCenter = () => {
+const HeaderLinks = () => {
   return (
     <Container maxWidth="sm">
       <Button
@@ -18,4 +18,4 @@ const TopCenter = () => {
   );
 };
 
-export default TopCenter;
+export default HeaderLinks;
